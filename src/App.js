@@ -168,8 +168,8 @@ function App() {
         <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center">
           Title
         </h1>
-        <div className="grid grid-cols-2 gap-4 w-4/6 lg:mx-auto">
-          <div className="lg:p-8 md:p-6 sm:p-4">
+        <div className="grid grid-cols-2 gap-4 lg:w-4/6 md:w-11/12 lg:mx-auto">
+          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
             <h2 className="mx-auto text-3xl font-bold text-black flex justify-start mb-2">
               Lorem ipsum dolor sit amet{" "}
             </h2>
@@ -185,7 +185,7 @@ function App() {
               </a>
             </p>
           </div>
-          <div className="lg:p-8 md:p-6 sm:p-4">
+          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
             <svg
               class="w-full sm:h-64 mx-auto"
               viewBox="0 0 1177 598.5"
@@ -458,7 +458,7 @@ function App() {
               ></path>
             </svg>
           </div>
-          <div className="lg:p-8 md:p-6 sm:p-4">
+          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
             <svg
               class="w-5/6 sm:h-64 mx-auto"
               viewBox="0 0 1176.60617 873.97852"
@@ -630,7 +630,7 @@ function App() {
               ></circle>
             </svg>
           </div>
-          <div className="lg:p-8 md:p-6 sm:p-4">
+          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
             <h2 className="mx-auto text-3xl font-bold text-black flex justify-start mb-2">
               Lorem ipsum dolor sit amet{" "}
             </h2>
