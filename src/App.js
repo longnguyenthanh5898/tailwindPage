@@ -98,12 +98,12 @@ function App() {
               Sub-hero message, not too long and not too short. Make it just
               right!
             </div>
-            <button className=" font-extrabold mx-auto button-bg rounded w-48 py-4 my-4 hover:underline opacity-75">
+            <button className=" block md:inline-block font-extrabold mx-auto button-bg rounded w-48 py-4 my-4 hover:underline opacity-75">
               Sign up
             </button>
             <a
               href="#"
-              className="text-gray-600 font-extrabold tracking-wide px-4 mx-4 hover:underline"
+              className="block md:inline-block text-gray-600 font-extrabold tracking-wide px-4 mx-4 hover:underline"
             >
               View Additional Action
             </a>
@@ -159,7 +159,7 @@ function App() {
             >
               <path d="M10 12a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4 2.75V20l-4-4-4 4v-8.25a6.97 6.97 0 0 0 8 0z"></path>
             </svg>
-            BadgeLife.io
+            BadgeLife
           </div>
           <div className="w-1/2 p-4 md:w-auto flex-1 opacity-75 my-10 text-gray-500 text-xl font-bold text-center">
             <svg
@@ -734,109 +734,112 @@ function App() {
       </section>
       {/* price */}
       <section className="bg-gray-100 py-8 ">
-        <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
-          Pricing
-        </h1>
-        <div className="flex mx-auto justify-center pt-12 my-12 w-5/6 md:w-11/12">
-          {/* item 1 */}
-          <div className="flex flex-col w-5/6 lg:w-1/4 justify-center bg-white rounded shadow">
-            <div className="flex flex-col justify-center">
-              <div className="flex flex-row p-8  border-b-4 border-gray-200 justify-center">
-                <h2 className=" font-bold text-3xl ">Free</h2>
-              </div>
-
-              <p className="flex flex-row justify-center py-4 border-b border-gray-200">
-                Thing
-              </p>
-              <p className="flex flex-row justify-center py-4  border-b border-gray-200">
-                Thing
-              </p>
-              <p className="flex flex-row justify-center  py-4  border-b border-gray-200">
-                Thing
-              </p>
-
-              <div className="flex flex-col py-6">
-                <div className="flex flex-row justify-center py-4 text-gray-600">
-                  <h1 className="inline-block text-3xl font-bold ">$0 </h1>{" "}
-                  <p className="inline-block text-base font-bold bottom-0 mt-3.5">
-                    {" "}
-                    &nbsp;for one user
-                  </p>
+        <div className="container px-2 pt-4 mx-auto">
+          <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
+            Pricing
+          </h1>
+          <div className="flex sm:flex-row flex-col mx-auto justify-center pt-12 my-12 ">
+            {/* item 1 */}
+            <div className="flex flex-col mx-auto mb-16 md:mb-4 md:mx-0 w-5/6  lg:w-1/4 justify-center bg-white rounded shadow">
+              <div className="flex flex-col justify-center">
+                <div className="flex flex-row p-8  border-b-4 border-gray-200 justify-center">
+                  <h2 className=" font-bold text-3xl ">Free</h2>
                 </div>
 
-                <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
-                  Sign up
-                </button>
+                <p className="flex flex-row justify-center py-4 border-b border-gray-200">
+                  Thing
+                </p>
+                <p className="flex flex-row justify-center py-4  border-b border-gray-200">
+                  Thing
+                </p>
+                <p className="flex flex-row justify-center  py-4  border-b border-gray-200">
+                  Thing
+                </p>
+
+                <div className="flex flex-col py-6">
+                  <div className="flex flex-row justify-center py-4 text-gray-600">
+                    <h1 className="inline-block text-3xl font-bold ">$0 </h1>{" "}
+                    <p className="inline-block text-base font-bold bottom-0 mt-3.5">
+                      {" "}
+                      &nbsp;for one user
+                    </p>
+                  </div>
+
+                  <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
+                    Sign up
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          {/*item 2  */}
-          <div className="flex flex-col w-5/6 lg:w-1/3 price-bg -mt-12 rounded shadow font-bold">
-            <div className="flex flex-col justify-center">
-              <div className="flex flex-row p-8  justify-center">
-                <h2 className=" font-bold text-3xl ">Basic</h2>
-              </div>
-
-              <p className="flex flex-row justify-center py-4 ">Thing</p>
-              <p className="flex flex-row justify-center py-4  ">Thing</p>
-              <p className="flex flex-row justify-center  py-4  ">Thing</p>
-              <p className="flex flex-row justify-center  py-4  ">Thing</p>
-
-              <div className="flex flex-col py-6">
-                <div className="flex flex-row justify-center py-4 text-gray-900">
-                  <h1 className="inline-block text-4xl font-bold ">$x.99 </h1>{" "}
-                  <p className="inline-block text-base font-bold bottom-0 mt-3.5">
-                    {" "}
-                    / per user
-                  </p>
+            {/*item 2  */}
+            <div className="flex flex-col  mx-auto mb-4 md:mx-0 md:mb-0 w-5/6 lg:w-1/3 price-bg -mt-12 rounded shadow font-bold">
+              <div className="flex flex-col justify-center">
+                <div className="flex flex-row p-8  justify-center">
+                  <h2 className=" font-bold text-3xl ">Basic</h2>
                 </div>
 
-                <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
-                  Sign up
-                </button>
+                <p className="flex flex-row justify-center py-4 ">Thing</p>
+                <p className="flex flex-row justify-center py-4  ">Thing</p>
+                <p className="flex flex-row justify-center  py-4  ">Thing</p>
+                <p className="flex flex-row justify-center  py-4  ">Thing</p>
+
+                <div className="flex flex-col py-6">
+                  <div className="flex flex-row justify-center py-4 text-gray-900">
+                    <h1 className="inline-block text-4xl font-bold ">$x.99 </h1>{" "}
+                    <p className="inline-block text-base font-bold bottom-0 mt-3.5">
+                      {" "}
+                      / per user
+                    </p>
+                  </div>
+
+                  <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
+                    Sign up
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          {/* item 3 */}
-          <div className="flex flex-col w-5/6 lg:w-1/4 justify-center bg-white rounded shadow">
-            <div className="flex flex-col justify-center">
-              <div className="flex flex-row p-8  border-b-4 border-gray-200 justify-center">
-                <h2 className=" font-bold text-3xl ">Pro</h2>
-              </div>
-
-              <p className="flex flex-row justify-center py-4 border-b border-gray-200">
-                Thing
-              </p>
-              <p className="flex flex-row justify-center py-4  border-b border-gray-200">
-                Thing
-              </p>
-              <p className="flex flex-row justify-center  py-4  border-b border-gray-200">
-                Thing
-              </p>
-
-              <div className="flex flex-col py-6">
-                <div className="flex flex-row justify-center py-4 text-gray-600">
-                  <h1 className="inline-block text-3xl font-bold ">$x.99 </h1>{" "}
-                  <p className="inline-block text-base font-bold bottom-0 mt-3.5">
-                    {" "}
-                    / per user
-                  </p>
+            {/* item 3 */}
+            <div className="flex flex-col  mx-auto mb-4 md:mx-0 md:mb-0 w-5/6 lg:w-1/4 justify-center bg-white rounded shadow">
+              <div className="flex flex-col justify-center">
+                <div className="flex flex-row p-8  border-b-4 border-gray-200 justify-center">
+                  <h2 className=" font-bold text-3xl ">Pro</h2>
                 </div>
 
-                <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
-                  Sign up
-                </button>
+                <p className="flex flex-row justify-center py-4 border-b border-gray-200">
+                  Thing
+                </p>
+                <p className="flex flex-row justify-center py-4  border-b border-gray-200">
+                  Thing
+                </p>
+                <p className="flex flex-row justify-center  py-4  border-b border-gray-200">
+                  Thing
+                </p>
+
+                <div className="flex flex-col py-6">
+                  <div className="flex flex-row justify-center py-4 text-gray-600">
+                    <h1 className="inline-block text-3xl font-bold ">$x.99 </h1>{" "}
+                    <p className="inline-block text-base font-bold bottom-0 mt-3.5">
+                      {" "}
+                      / per user
+                    </p>
+                  </div>
+
+                  <button className="flex-row font-bold text-gray-800 button-bg px-8  my-6 py-4 rounded mx-auto opacity-75 shadow">
+                    Sign up
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* action */}
       <section className="py-8 price-bg ">
-        <h1 className="mx-auto text-5xl font-extrabold text-white flex justify-center mb-10">
+        <h1 className="mx-auto text-4xl md:text-5xl font-extrabold text-white flex justify-center mb-10">
           Call to Action
         </h1>
-        <h2 className="mx-auto text-3xl font-bold text-black flex justify-center mb-4">
+        <h2 className="mx-auto text-xl md:text-3xl font-bold text-black flex justify-center mb-4">
           Main Hero Message to sell yourself!
         </h2>
         <div className="text-center">
@@ -847,9 +850,9 @@ function App() {
       </section>
       {/* footer */}
       <section className="py-8">
-        <div className="flex-1 w-full desktop:w-5/6 mobile:w-11/12 container mx-auto flex flex-wrap items-start justify-between mt-0 px-2 py-2 lg:py-6">
+        <div className="flex-1 flex-col md:flex-row w-full desktop:w-5/6 mobile:w-11/12 container mx-auto flex flex-wrap items-start justify-between mt-0 px-2 py-2 lg:py-6">
           {/* logo */}
-          <div className="flex items-center desktop:w-1/5 mobile:w-1/12">
+          <div className="flex flex-1 items-center ">
             <a
               href="#"
               className="text-black font-bold desktop:text-2xl lg:text-4xl md:text-xl"
@@ -873,81 +876,126 @@ function App() {
           {/* nav-content */}
           {/* <div className="w-full flex-grow text-black lg:flex lg:items-center mobile:flex mobile:items-center lg:w-auto lg:block lg:mt-0 lg:p-0 p-4 z-20"> */}
           {/* flex-1 */}
-          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
-            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
-                FAQ
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Help
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Support
-              </a>
-            </li>
-          </ul>
+          <div className="flex-1 ">
+            <p className="font-bold text-gray-800 flex  mb-2">LINKS</p>
+            <ul className="">
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500  hover:underline py-2 "
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Help
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* flex-2 */}
-          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
-            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
-                FAQ
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Help
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Support
-              </a>
-            </li>
-          </ul>
+          <div className="flex-1 ">
+            <p className="font-bold text-gray-800 flex  mb-2">LINKS</p>
+            <ul className="">
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500  hover:underline py-2 "
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Help
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
           {/* flex-3 */}
-          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
-            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
-                FAQ
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Help
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Support
-              </a>
-            </li>
-          </ul>
+          <div className="flex-1 ">
+            <p className="font-bold text-gray-800 flex  mb-2">LINKS</p>
+            <ul className="">
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500  hover:underline py-2 "
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Help
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
           {/* flex-4 */}
-          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
-            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
-                FAQ
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Help
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
-                Support
-              </a>
-            </li>
-          </ul>
+          <div className="flex-1 ">
+            <p className="font-bold text-gray-800 flex  mb-2">LINKS</p>
+            <ul className="">
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500  hover:underline py-2 "
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Help
+                </a>
+              </li>
+              <li className="mr-3 md:block inline-block">
+                <a
+                  href="#"
+                  className="flex text-gray-500 hover:underline py-2 "
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         {/* </div> */}
       </section>
