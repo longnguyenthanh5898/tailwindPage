@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 function App() {
+  const [isToggle, setIsToggle] = useState(false);
   return (
     // header
     <>
@@ -27,7 +29,12 @@ function App() {
             </div>
             {/* button */}
             <div className="lg:hidden">
-              <button className="button-bg py-2 px-3 rounded border border-black">
+              <button
+                onClick={() => {
+                  setIsToggle(!isToggle);
+                }}
+                className="button-bg py-2 px-3 rounded border border-black"
+              >
                 <svg
                   class="fill-current h-3 w-3 text-black"
                   viewBox="0 0 20 20"
@@ -40,7 +47,10 @@ function App() {
             {/* nav-content */}
             <div
               id="nav-content"
-              className="w-full flex-grow text-black lg:flex lg:items-center lg:w-auto lg:block lg:mt-0 lg:p-0 p-4 z-20 md:hidden sm:hidden ss:hidden"
+              className={
+                "w-full flex-grow text-black lg:flex lg:items-center lg:w-auto lg:block lg:mt-0 lg:p-0 p-4 z-20 md:hidden ss:hidden sm:hidden" +
+                (isToggle ? " block" : " hidden")
+              }
             >
               <ul className="lg:flex justify-end flex-1 items-center">
                 <li className="mr-3">
@@ -84,7 +94,7 @@ function App() {
             <h1 className="font-black lg:text-5xl md:text-4xl text-3xl tracking-tight mt-4">
               Main Hero Message to sell yourself!
             </h1>
-            <div className="lg:text-2xl text-xl mt-4 mb-10 tracking-normal">
+            <div className="lg:text-2xl md:text-xl mt-4 mb-10 tracking-normal">
               Sub-hero message, not too long and not too short. Make it just
               right!
             </div>
@@ -101,7 +111,7 @@ function App() {
 
           {/* browser mockup */}
 
-          <div class="max-w-6xl mx-auto md:mx-12 md:py-6 py-10">
+          <div class="max-w-6xl mx-auto md:mx-12 md:py-6 py-10 w-5/6 sm:w-11/12 md:w-11/12">
             <div class="w-full h-10 relative rounded-t-lg bg-white flex overflow-hidden justify-start items-center space-x-1.5 px-2">
               <div class="absolute w-full h-full inset-0 bg-gray-300 opacity-50"></div>
               <span class="relative w-3 h-3 border-2 rounded-full border-red-800 bg-red-800"></span>
@@ -116,12 +126,12 @@ function App() {
       </div>
 
       {/* our customer */}
-      <section className="bg-red pt-16 pb-20">
+      <section className="bg-red pt-16 pb-20 flex-wrap">
         <h1 className="font-extrabold mx-auto font-s text-2xl py-8 text-center">
           Our Customers / Featured in
         </h1>
         <div className="flex flex-wrap mx-auto justify-around max-w-4xl">
-          <div className="flex-1 opacity-75 my-10 text-gray-500 lg:text-2xl md:text-xl font-bold text-center">
+          <div className="w-1/2 p-4 md:w-auto flex-1 opacity-75 my-10 text-gray-500 text-xl font-bold text-center">
             <svg
               class="h-10 w-8 mr-2 fill-current inline-block"
               xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +141,7 @@ function App() {
             </svg>
             TeeShirtz
           </div>
-          <div className="flex-1 opacity-75 my-10 text-gray-500 text-2xl font-bold text-center">
+          <div className="w-1/2 p-4 md:w-auto flex-1 opacity-75 my-10 text-gray-500 text-xl font-bold text-center">
             <svg
               class="h-10 w-8 mr-2 fill-current inline-block"
               xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +151,7 @@ function App() {
             </svg>
             Mic.Check
           </div>
-          <div className="flex-1 opacity-75 my-10 text-gray-500 text-2xl font-bold text-center">
+          <div className="w-1/2 p-4 md:w-auto flex-1 opacity-75 my-10 text-gray-500 text-xl font-bold text-center">
             <svg
               class="h-10 w-8 mr-2 fill-current inline-block"
               xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +161,7 @@ function App() {
             </svg>
             BadgeLife.io
           </div>
-          <div className="flex-1 opacity-75 my-10 text-gray-500 text-2xl font-bold text-center">
+          <div className="w-1/2 p-4 md:w-auto flex-1 opacity-75 my-10 text-gray-500 text-xl font-bold text-center">
             <svg
               class="h-10 w-8 mr-2  fill-current inline-block"
               xmlns="http://www.w3.org/2000/svg"
@@ -649,7 +659,7 @@ function App() {
         </div>
       </section>
       {/* title-2 */}
-      <section className="bg-white py-8 mx-auto w-10/12">
+      <section className="bg-white py-8 mx-auto lg:w-10/12 mobile:w-11/12">
         <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
           Title
         </h1>
@@ -721,7 +731,7 @@ function App() {
         <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
           Pricing
         </h1>
-        <div className="flex mx-auto justify-center pt-12 my-12 w-5/6">
+        <div className="flex mx-auto justify-center pt-12 my-12 w-5/6 md:w-11/12">
           {/* item 1 */}
           <div className="flex flex-col w-5/6 lg:w-1/4 justify-center bg-white rounded shadow">
             <div className="flex flex-col justify-center">
@@ -831,10 +841,13 @@ function App() {
       </section>
       {/* footer */}
       <section className="py-8">
-        <div className=" w-full desktop:w-5/6 container mx-auto flex flex-wrap items-start justify-between mt-0 px-2 py-2 lg:py-6">
+        <div className="flex-1 w-full desktop:w-5/6 mobile:w-11/12 container mx-auto flex flex-wrap items-start justify-between mt-0 px-2 py-2 lg:py-6">
           {/* logo */}
-          <div className="flex items-center w-1/5">
-            <a href="#" className="text-black font-bold text-2xl lg:text-4xl">
+          <div className="flex items-center desktop:w-1/5 mobile:w-1/12">
+            <a
+              href="#"
+              className="text-black font-bold desktop:text-2xl lg:text-4xl md:text-xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -852,121 +865,85 @@ function App() {
           </div>
 
           {/* nav-content */}
-          <div className="w-full flex-grow text-black lg:flex lg:items-center lg:w-auto lg:block lg:mt-0 lg:p-0 p-4 z-20">
-            {/* flex-1 */}
-            <ul className="lg:flex justify-start flex-1  flex flex-col">
-              <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500  hover:underline py-2 "
-                >
-                  FAQ
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Help
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Support
-                </a>
-              </li>
-            </ul>
-            {/* flex-2 */}
-            <ul className="lg:flex justify-start flex-1  flex flex-col">
-              <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500  hover:underline py-2 "
-                >
-                  FAQ
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Help
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Support
-                </a>
-              </li>
-            </ul>
-            {/* flex-3 */}
-            <ul className="lg:flex justify-start flex-1  flex flex-col">
-              <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500  hover:underline py-2 "
-                >
-                  FAQ
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Help
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Support
-                </a>
-              </li>
-            </ul>
-            {/* flex-4 */}
-            <ul className="lg:flex justify-start flex-1  flex flex-col">
-              <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500  hover:underline py-2 "
-                >
-                  FAQ
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Help
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  href="#"
-                  className="flex text-gray-500 hover:underline py-2 "
-                >
-                  Support
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* <div className="w-full flex-grow text-black lg:flex lg:items-center mobile:flex mobile:items-center lg:w-auto lg:block lg:mt-0 lg:p-0 p-4 z-20"> */}
+          {/* flex-1 */}
+          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
+            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
+                FAQ
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Help
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Support
+              </a>
+            </li>
+          </ul>
+          {/* flex-2 */}
+          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
+            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
+                FAQ
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Help
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Support
+              </a>
+            </li>
+          </ul>
+          {/* flex-3 */}
+          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
+            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
+                FAQ
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Help
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Support
+              </a>
+            </li>
+          </ul>
+          {/* flex-4 */}
+          <ul className="lg:flex mobile:flex justify-start flex-1  flex flex-col">
+            <p className="font-bold text-gray-600 flex mb-2">LINKS</p>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500  hover:underline py-2 ">
+                FAQ
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Help
+              </a>
+            </li>
+            <li className="mr-3">
+              <a href="#" className="flex text-gray-500 hover:underline py-2 ">
+                Support
+              </a>
+            </li>
+          </ul>
         </div>
+        {/* </div> */}
       </section>
     </>
   );
