@@ -175,11 +175,11 @@ function App() {
       </section>
       {/* title-1 */}
       <section className="bg-gray-100 py-8">
-        <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center">
+        <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-8">
           Title
         </h1>
-        <div className="grid grid-cols-2 gap-4 lg:w-4/6 md:w-11/12 lg:mx-auto">
-          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:w-4/6 md:w-11/12 lg:mx-auto">
+          <div className="lg:p-8 mobile:p-6 p-4 mobile:w-1/2">
             <h2 className="mx-auto text-3xl font-bold text-black flex justify-start mb-2">
               Lorem ipsum dolor sit amet{" "}
             </h2>
@@ -195,7 +195,7 @@ function App() {
               </a>
             </p>
           </div>
-          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
+          <div className="lg:p-8 mobile:p-6 p-4 mobile:w-1/2">
             <svg
               class="w-full sm:h-64 mx-auto"
               viewBox="0 0 1177 598.5"
@@ -468,7 +468,7 @@ function App() {
               ></path>
             </svg>
           </div>
-          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
+          <div className="lg:p-8 mobile:p-6 p-4 mobile:w-1/2">
             <svg
               class="w-5/6 sm:h-64 mx-auto"
               viewBox="0 0 1176.60617 873.97852"
@@ -640,7 +640,7 @@ function App() {
               ></circle>
             </svg>
           </div>
-          <div className="lg:p-8 mobile:p-6 sm:p-4 mobile:w-1/2">
+          <div className="lg:p-8 mobile:p-6 p-4 mobile:w-1/2">
             <h2 className="mx-auto text-3xl font-bold text-black flex justify-start mb-2">
               Lorem ipsum dolor sit amet{" "}
             </h2>
@@ -659,75 +659,81 @@ function App() {
         </div>
       </section>
       {/* title-2 */}
-      <section className="bg-white py-8 mx-auto lg:w-10/12 mobile:w-11/12">
-        <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
+      <section className="bg-white border-b py-8">
+        <h1 className="mx-auto text-5xl font-extrabold text-black text-center mb-14">
           Title
         </h1>
-
-        <div className="flex justify-around px-2">
-          <div className="flex-1  py-4 border-solid border-2 border-color shadow rounded m-2">
-            <a href="#" className="">
-              <div className="px-6 border border-color ">
-                <p>GETTING START</p>
-                <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
-                  Lorem ipsum dolor sit amet{" "}
-                </h2>
-                <p className="mb-4">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Natus cumque cupiditate explicabo atque quae
-                </p>
+        <div className="container mx-auto flex flex-wrap pt-4 pb-12 ">
+          {/* flex-1 */}
+          <div className="w-full md:w-1/3 p-6 flex  flex-col flex-grow flex-shrink  lg:w-1/3   ">
+            <div className="flex-1 border-solid border-2 border-color shadow rounded">
+              <a href="#" className="">
+                <div className="px-6 border border-color ">
+                  <p className="mt-4">GETTING START</p>
+                  <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
+                    Lorem ipsum dolor sit amet{" "}
+                  </h2>
+                  <p className="mb-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Natus cumque cupiditate explicabo atque quae
+                  </p>
+                </div>
+              </a>
+              <div className="p-6">
+                <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
+                  Action
+                </button>
               </div>
-            </a>
-            <div className="p-6">
-              <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
-                Action
-              </button>
             </div>
           </div>
-
-          <div className="flex-1  py-4 border-solid border-2 border-color shadow rounded m-2">
-            <a href="#" className="">
-              <div className="px-6 border border-color ">
-                <p>GETTING START</p>
-                <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
-                  Lorem ipsum dolor sit amet{" "}
-                </h2>
-                <p className="mb-4">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Natus cumque cupiditate explicabo atque quae
-                </p>
+          {/* flex-2 */}
+          <div className="w-full md:w-1/3 p-6 flex  flex-col flex-grow flex-shrink  lg:w-1/3   ">
+            <div className="flex-1 border-solid border-2 border-color shadow rounded">
+              <a href="#" className="">
+                <div className="px-6 border border-color ">
+                  <p className="mt-4">GETTING START</p>
+                  <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
+                    Lorem ipsum dolor sit amet{" "}
+                  </h2>
+                  <p className="mb-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Natus cumque cupiditate explicabo atque quae
+                  </p>
+                </div>
+              </a>
+              <div className="p-6">
+                <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
+                  Action
+                </button>
               </div>
-            </a>
-            <div className="p-6">
-              <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
-                Action
-              </button>
             </div>
           </div>
-
-          <div className="flex-1  py-4 border-solid border-2 border-color shadow rounded m-2">
-            <a href="#" className="">
-              <div className="px-6 border border-color ">
-                <p>GETTING START</p>
-                <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
-                  Lorem ipsum dolor sit amet{" "}
-                </h2>
-                <p className="mb-4">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Natus cumque cupiditate explicabo atque quae
-                </p>
+          {/* flex-3 */}
+          <div className="w-full md:w-1/3 p-6 flex  flex-col flex-grow flex-shrink  lg:w-1/3   ">
+            <div className="flex-1 border-solid border-2 border-color shadow rounded">
+              <a href="#" className="">
+                <div className="px-6 border border-color ">
+                  <p className="mt-4">GETTING START</p>
+                  <h2 className="mx-auto text-xl font-bold text-black flex justify-start mb-2">
+                    Lorem ipsum dolor sit amet{" "}
+                  </h2>
+                  <p className="mb-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Natus cumque cupiditate explicabo atque quae
+                  </p>
+                </div>
+              </a>
+              <div className="p-6">
+                <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
+                  Action
+                </button>
               </div>
-            </a>
-            <div className="p-6">
-              <button className="font-extrabold button-bg px-8 py-6 rounded mx-auto  my-6 opacity-75 shadow hover:underline">
-                Action
-              </button>
             </div>
           </div>
         </div>
       </section>
       {/* price */}
-      <section className="bg-gray-100 py-8">
+      <section className="bg-gray-100 py-8 ">
         <h1 className="mx-auto text-5xl font-extrabold text-black flex justify-center mb-14">
           Pricing
         </h1>
